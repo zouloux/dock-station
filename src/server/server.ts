@@ -11,8 +11,7 @@ const crypto = require('crypto');
 const secureSalts = ['iL0v3', '$aL7']
 const secureAccess  = {
 	// Login : Hashed Password
-	//'admin' : '8d06d5ad959b3144f63a155d4bc610cfe0253d77dc0975b8e47a2055a1ff998b' // admin : admin
-	'zouloux' : 'a8c0b59aa4197731be605df1930d24923b9c9fec43288591f183f15543f5c183'
+	'admin' : '8d06d5ad959b3144f63a155d4bc610cfe0253d77dc0975b8e47a2055a1ff998b', // admin : admin
 
 	// To know your password hash, start server open URL in a browser.
 	// A http auth prompt should open and ask for login / password.

@@ -1,0 +1,28 @@
+{
+	// https://www.typescriptlang.org/docs/handbook/compiler-options.html
+	"compilerOptions": {
+		"target" : "ESNext",
+		"module": "ESNext",
+		"moduleResolution": "node",
+		//"declaration": true,
+		"allowJs" : true,
+		"checkJs": true,
+		//"isolatedModules": true,
+		"jsx": "react",
+		"jsxFactory" : "h",
+		"types": [
+			"node",
+			//"@solid-js/bundler",
+			//"./node_modules/@solid-js/bundler/dist/_index.d.ts"
+		],
+		//"lib": ["ESNext", "DOM", "ScriptHost"]
+	},
+	"include" : [
+		"./solid*.js",
+		"./src/**/*"
+	],
+	"exclude": [
+		"node_modules",
+		"./src/updater/**/*"
+	]
+}

@@ -1,0 +1,14 @@
+node_modules
+.parcel-cache
+.idea
+_
+
+data
+dist
+
+.DS_Store
+.env
+
+local-get-data.sh
+local-update-data.sh
+

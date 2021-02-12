@@ -1,0 +1,42 @@
+{
+  "name": "dock-station",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "reset": "rm -rf .parcel-cache && rm -rf node_modules && rm -rf package-lock.json && npm install",
+    "postinstall": "npm run server-install",
+    "server-install": "cd src/server && npm i",
+    "relink": "npm link @solid-js/core && npm link @solid-js/cli && npm link @solid-js/files && npm link @solid-js/bundler"
+  },
+  "author": "Alexis Bouhet",
+  "license": "MIT",
+  "devDependencies": {
+    "@parcel/core": "2.0.0-nightly.558",
+    "@parcel/babel-plugin-transform-runtime": "^2.0.0-nightly.1823",
+    "@parcel/transformer-typescript-tsc": "2.0.0-nightly.560",
+    "@parcel/validator-typescript": "2.0.0-nightly.560",
+    "@solid-js/bundler": "^2.2.6",
+    "@solid-js/cli": "^1.1.2",
+    "@solid-js/core": "^0.1.2",
+    "@solid-js/files": "^1.0.3",
+    "@solid-js/signal": "^0.11.0",
+    "@types/node": "^14.14.22",
+    "autoprefixer": "^10.2.4",
+    "less": "^4.1.1",
+    "parcel": "2.0.0-nightly.558",
+    "parcel-namer-rewrite": "^2.0.0-beta.1-7",
+    "postcss": "^8.2.4",
+    "postcss-modules": "^4.0.0"
+  },
+  "dependencies": {
+    "preact": "^10.5.12"
+  },
+  "parcel-namer-rewrite": {
+    "chain": "@parcel/namer-default",
+    "rules": {
+      "(.*)/(.*)": "$2"
+    },
+    "silent": true
+  }
+}

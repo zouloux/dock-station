@@ -1,0 +1,19 @@
+{
+	"name": "dock-station-server",
+	"version": "0.1.0",
+	"description": "",
+	"main": "server.js",
+	"scripts": {},
+	"author": "Alexis Bouhet",
+	"license": "",
+	"devDependencies": {},
+	"dependencies": {
+		"fastify": "^3.11.0",
+		"fastify-static": "^3.4.0",
+		"fastify-basic-auth": "^1.0.1",
+		"@solid-js/cli": "^1.1.2",
+		"@solid-js/files": "^1.0.3",
+		"@solid-js/core": "^0.1.2"
+	},
+	"parcel-namer-rewrite": {}
+}

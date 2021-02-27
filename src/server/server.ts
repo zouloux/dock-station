@@ -3,6 +3,7 @@ import fastifyStatic from "fastify-static";
 import * as path from "path"
 import { onProcessKilled } from "@solid-js/cli";
 const crypto = require('crypto');
+import {Directory, File, FileFinder} from "@solid-js/files"
 
 
 // ----------------------------------------------------------------------------- CONFIG
@@ -23,7 +24,7 @@ const secureAccess  = {
 // ----------------------------------------------------------------------------- SERVER INIT
 
 // Init server instance
-const server = fastify();
+const server = fastify({ logger: false });
 
 // Init static folders
 server.register(fastifyStatic, {
@@ -98,7 +99,9 @@ server.setErrorHandler( ( error, request, reply ) => {
 
 // ----------------------------------------------------------------------------- APIs
 
-require('./server-api').init( server );
+server.register( require('./api/docker'), {
+	prefix: '/api/docker'
+})
 
 // ----------------------------------------------------------------------------- START SERVER
 
